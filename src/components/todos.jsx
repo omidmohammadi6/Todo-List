@@ -4,11 +4,14 @@ import TodoItem from "./TodoItem";
 
 export default function Todos() {
   const { todos } = useContext(TodoContext);
+  console.log(todos, "todos");
 
   return (
     <div className="">
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} />
+        <div>
+          <TodoItem key={todo.id} todo={todo} />
+        </div>
       ))}
     </div>
   );
